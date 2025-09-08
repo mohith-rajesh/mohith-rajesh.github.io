@@ -1,113 +1,238 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>John Doe</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <title>Mohith Rajesh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.4;
+      background-color: #fff;
+    }
+
+    /* Container for all content */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+
+    /* Top Navbar */
+    nav {
+      background-color: #222;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .name {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      border-left: none;
+      border-right: none;
+    }
+    .profile {
+      text-align: center;
+      max-width: 300px;
+      flex: 1;
+      min-width: 250px;
+      border-right: 1px solid #ccc;
+      padding-right: 2rem;
+    }
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .profile h1 {
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .socials {
+      margin: 0.4rem 0;
+      display: flex;          /* horizontal row */
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .socials a {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #333;
+      display: inline-block;
+    }
+    .email a {
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: 500;
+      color: #333;
+      text-decoration: none;
+    }
+    .hero-content {
+      flex: 2;
+      min-width: 300px;
+      padding-left: 2rem; /* spacing after vertical line */
+    }
+
+    /* Section styling */
+    section {
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      text-align: left;
+    }
+    section p {
+      margin: 0.3rem 0;
+      text-align: left;
+    }
+
+    /* Timeline (News) */
+    ul.timeline {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 auto;
+      text-align: left;
+      display: inline-block;
+    }
+    ul.timeline li {
+      margin-bottom: 0.25rem;
+    }
+    ul.timeline li span {
+      font-weight: 600;
+      color: #555;
+      margin-right: 0.5rem;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile {
+        border-right: none;
+        padding-right: 0;
+      }
+      .hero-content {
+        padding-left: 0;
+        text-align: center;
+      }
+      ul.timeline {
+        display: block;
+        text-align: left;
+      }
+      .socials {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <div class="name">Mohith Rajesh</div>
+    <ul>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Resume</a></li>
+    </ul>
+  </nav>
 
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
+  <!-- Main Container -->
+  <div class="container">
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
-                <p><b>john at doe.com</b><br>
-                <p>Random Department<br>
-                University of Randomness<br>
-                Street<br>
-                City <br>
-                Country<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="#">Twitter</a></dd>
-              <dd><a href="#">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
-
-            
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="profile">
+        <img src="img/profilepic.jpeg" alt="Mohith Rajesh">
+        <h1>Mohith Rajesh</h1>
+        <div class="socials">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Google Scholar</a>
+          <div class="email">
+            <a href="mailto:mohithr@andrew.cmu.edu">mohithr.andrew.cmu.edu</a>
+          </div>
         </div>
 
+      </div>
+      <div class="hero-content">
+         <p>
+          Hi there 👋! I am a master’s student at Carnegie Mellon University’s Language Technologies Institute (LTI) specializing in Machine Learning (ML) and Natural Language Processing (NLP). Before this, I worked as a software engineer at Morgan Stanley, where I applied large language models to streamline business workflows.
+        </p>
 
+        <p>
+          I’m currently interested in exploring multimodal question answering and information retrieval, with an emphasis on creating adaptable and efficient machine learning systems.
+          I am particularly interested in techniques for fine-tuning models and dynamically scaling their performance at inference time to balance efficiency and accuracy.
+        </p>
+      </div>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
 
+    <!-- News Section -->
+    <section>
+      <h2>News</h2>
+      <ul class="timeline">
+        <li><span>2025-08:</span> Starting my Master’s at CMU LTI</li>
+        <li><span>2024-01:</span> Promoted to Technology Associate at Morgan Stanley</li>
+        <li><span>2023-07:</span> Returning to Morgan Stanley as a full-time Technology Analyst</li>
+        <li><span>2023-05:</span> Graduated with my Bachelor’s in Computer Science and Engineering from PES University</li>
+        <li><span>2023-01:</span> Interning at Morgan Stanley</li>
+      </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h2>Education</h2>
+      <p>
+        <strong>Carnegie Mellon University</strong> | Pittsburgh, PA <br>
+        Master of Science in Intelligent Information Systems (MIIS) <br>
+        <em>Coursework:</em> Intro to ML, Advanced NLP, Deep Learning Systems
+      </p>
+      <p>
+        <strong>PES University</strong> | Bangalore, India <br>
+        Bachelor of Technology in Computer Science and Engineering <br>
+        <em>Awards:</em> Prof. CNR Rao Scholarship (top 2%)
+      </p>
+    </section>
+
+  </div>
+
+</body>
 </html>
